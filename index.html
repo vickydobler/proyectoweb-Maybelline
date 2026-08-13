@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     ETAPA 1: ESTRUCTURA BASE
+     Acá empieza la base del proyecto: le digo al navegador
+     que el documento está hecho con HTML5.
+============================================================ -->
+<html lang="es">
+<!-- Digo que todo el contenido está en español -->
+
+<head>
+  <!-- ============================================================
+       ETAPA 1: CONFIGURACIÓN INICIAL (HEAD)
+       Esta parte no se ve directamente, pero define
+       cómo se comporta y se muestra la página.
+  ============================================================ -->
+  <meta charset="UTF-8">
+  <!-- Permite que se vean bien las tildes, ñ y emojis -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que el diseño se adapte bien a pantallas chicas -->
+
+  <title>Vickup 💄 | tu guía para todos tus días</title>
+  <!-- Título visible en la pestaña del navegador -->
+
+  <!-- ============================================================
+       ETAPA 2: ESTILO BASE
+       Vinculo la fuente y el archivo principal de estilos (CSS)
+  ============================================================ -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Fuente moderna que uso en todo el sitio -->
+
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Archivo de estilos general para todos los HTML -->
+</head>
+
+<body>
+  <!-- ============================================================
+       ETAPA 1: HEADER Y MENÚ DE NAVEGACIÓN
+       Esta parte aparece igual en todas las páginas.
+       Tiene el logo, el lema y el menú principal.
+  ============================================================ -->
+  <header>
+    <!-- Logo clickeable que lleva al inicio -->
+    <a href="index.html" class="brand">
+      <img src="img/logo.jpg" alt="Vickup logo" class="logo-img">
+      <!-- Imagen del logo de mi sitio -->
+    </a>
+
+    <!-- Frase o lema -->
+    <p class="slogan">tu guía para todos tus días</p>
+
+    <!-- ============================================================
+         ETAPA 3: COMPORTAMIENTO DEL MENÚ HAMBURGUESA
+         Este botón aparece solo en celulares. Sirve para abrir o cerrar el menú.
+    ============================================================ -->
+    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <!-- Menú principal con enlaces a todas las secciones -->
+    <nav id="nav-menu">
+      <ul>
+        <li><a class="active" href="index.html">inicio</a></li>
+        <!-- “active” marca la página actual -->
+        <li><a href="tutoriales.html">tutoriales</a></li>
+        <li><a href="productos.html">productos</a></li>
+        <li><a href="data.html">meKit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       ETAPA 2 / 3: SLIDER (CARRUSEL ESTÁTICO)
+       ETAPA 2: estructura con imágenes
+       ETAPA 3: interactividad (efecto hover)
+  ============================================================ -->
+  <section class="slider">
+    <div class="slides">
+      <!-- Cada imagen tiene un link que lleva a su tutorial -->
+      <a href="tutoriales.html#cleanlook" class="slide">
+        <img src="img/cleanlook.jpg" alt="Clean Look Natural">
+        <span class="slide-caption">Clean look</span>
+      </a>
+
+      <a href="tutoriales.html#gala" class="slide">
+        <img src="img/gala.jpg" alt="Maquillaje de Gala">
+        <span class="slide-caption">Gala brillante</span>
+      </a>
+
+      <a href="tutoriales.html#noche" class="slide">
+        <img src="img/noche.jpg" alt="Maquillaje de noche">
+        <span class="slide-caption">Glam de noche</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ETAPA 1: CONTENIDO PRINCIPAL
+       Acá van las secciones de texto informativo y consejos.
+  ============================================================ -->
+  <main>
+    <!-- Sección informativa -->
+    <section>
+      <h2>lo último en maquillaje</h2>
+      <p>
+        piel luminosa, acabados livianos y tonos que realzan tu belleza real.  
+        elegí un look y seguí el paso a paso.
+      </p>
+    </section>
+
+    <!-- Sección complementaria (a la derecha en pantallas grandes) -->
+    <section class="right">
+      <h2>tips de belleza</h2>
+      <p>
+        💧 hidratá tu piel antes del maquillaje. <br>
+        🌸 usá productos livianos con acabado glow. <br>
+        💋 elegí tonos que realcen tu color natural.
+      </p>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       ETAPA 2: PIE DE PÁGINA (FOOTER)
+       Igual en todas las páginas: cierra el sitio visualmente.
+  ============================================================ -->
+  <footer>
+    <p>© 2025 Vickup 💄 | tu guía para todos tus días</p>
+  </footer>
+
+  <!-- ============================================================
+       ETAPA 3 / 4: SCRIPT DE COMPORTAMIENTO
+       ETAPA 3: hace funcionar el menú hamburguesa.
+       ETAPA 4: mantiene el menú coherente cuando cambia el tamaño.
+  ============================================================ -->
+  <script src="js/base.js"></script>
+</body>
+</html>
+
+<!-- ============================================================
+     ETAPA 2 y 4: SECCIÓN EXTRA - TENDENCIAS 2025
+     Acá agregué una sección con looks del año, inspirada
+     en revistas de moda, adaptada a mi propio sitio.
+============================================================ -->
+<section class="tendencias-2025">
+  <h2>💄 Tendencias 2025: del minimalismo al impacto visual</h2>
+
+  <p class="intro-tendencias">
+    Este año el maquillaje mezcla lo natural y lo artístico.  
+    Piel real, texturas livianas y toques coloridos son los protagonistas.
+  </p>
+
+  <div class="tendencias-grid">
+    <!-- LOOK 1 -->
+    <article class="look-item">
+      <img src="img/tendencia1.jpg" alt="Natural urbano">
+      <div class="look-info">
+        <h3>Natural urbano</h3>
+        <p>
+          Piel hidratada, cejas cepilladas y labios rosa palo.  
+          Ideal para todos los días, simple y elegante.
+        </p>
+      </div>
+    </article>
+
+    <!-- LOOK 2 -->
+    <article class="look-item">
+      <img src="img/tendencia2.jpg" alt="Smokey difuminado">
+      <div class="look-info">
+        <h3>Mirada smokey difuminada</h3>
+        <p>
+          Sombras grises y topo con delineado suave.  
+          Look sofisticado sin exagerar.
+        </p>
+      </div>
+    </article>
+
+    <!-- LOOK 3 -->
+    <article class="look-item">
+      <img src="img/tendencia3.jpg" alt="Glow cálido">
+      <div class="look-info">
+        <h3>Glow cálido</h3>
+        <p>
+          Sombras doradas y bronce sunkissed en pómulos.  
+          Da un efecto natural y luminoso.
+        </p>
+      </div>
+    </article>
+
+    <!-- LOOK 4 -->
+    <article class="look-item">
+      <img src="img/tendencia4.jpg" alt="Glamour editorial">
+      <div class="look-info">
+        <h3>Glamour editorial</h3>
+        <p>
+          Piel porcelana y labios rojos intensos.  
+          Ideal para eventos o sesiones de fotos.
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <!-- Botón que lleva a los productos -->
+  <div class="boton-productos">
+    <a href="productos2025.html" class="btn-ver-productos">💋 Ver productos</a>
+  </div>
+</section>

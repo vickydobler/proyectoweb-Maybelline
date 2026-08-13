@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meKit 💄 | armá tu kit personalizado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/data.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="brand">
+      <img src="img/logo.jpg" alt="logo vickup" class="logo-img">
+    </a>
+
+    <p class="slogan">tu guía para todos tus días</p>
+
+    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">inicio</a></li>
+        <li><a href="tutoriales.html">tutoriales</a></li>
+        <li><a href="productos.html">productos</a></li>
+        <li><a class="active" href="data.html">meKit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="data-layout">
+
+    <section>
+      <h2>💄 armá tu mekit personalizado</h2>
+      <p>acá podés elegir tus productos favoritos y cargarlos en la tabla.
+      podés agregar, editar y eliminar lo que quieras.</p>
+    </section>
+
+    <section class="right">
+
+      <form id="item-form">
+        <h3>agregar o editar producto</h3>
+
+        <div class="field">
+          <label for="item-score">Puntaje del usuario *</label>
+          <input id="item-score" type="number" placeholder="Ej: 10, 8, 5">
+        </div>
+
+        <div class="field">
+          <label for="item-name">Producto *</label>
+          <select id="item-name">
+            <option value="">Elegí un producto...</option>
+            <option value="Base Natural Glow">Base Natural Glow</option>
+            <option value="Labial Glossy Oil">Labial Glossy Oil</option>
+            <option value="Paleta Dream Lights">Paleta Dream Lights</option>
+            <option value="Rubor Satin Bloom">Rubor Satin Bloom</option>
+            <option value="Highlighter Dew Drop">Highlighter Dew Drop</option>
+            <option value="Máscara Soft Volume">Máscara Soft Volume</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="item-type">Tipo *</label>
+          <input id="item-type" type="text" placeholder="Ej: Base, Labial, Rubor">
+        </div>
+
+        <div class="field">
+          <label for="item-brand">Marca *</label>
+          <input id="item-brand" type="text" placeholder="Ej: Dior, Fenty, Maybelline">
+        </div>
+
+        <div class="buttons">
+          <button id="btn-add" class="primary" type="submit">Agregar</button>
+          <button id="btn-save" class="primary hidden" type="submit">Guardar cambios</button>
+          <button id="btn-cancel" class="ghost" type="reset">Cancelar</button>
+        </div>
+
+        <div id="loading-indicator" class="hidden">
+          Procesando, por favor esperá…
+        </div>
+
+        <div id="status-message" class="status hidden"></div>
+      </form>
+
+      <div class="table-wrapper">
+        <h3>📦 productos en tu mekit</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Puntaje</th>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Marca</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+      <p>¿Querés eliminar este producto?</p>
+      <div class="modal-actions">
+        <button id="confirm-delete" class="danger">Eliminar</button>
+        <button id="cancel-delete" class="ghost">Cancelar</button>
+      </div>
+    </div>
+  </div>
+<footer>
+    <p>© 2025 Vickup 💄 | tu guía para todos tus días</p>
+  </footer>
+  <script src="js/base.js"></script>
+  <script src="js/data.js"></script>
+
+</body>
+</html>
